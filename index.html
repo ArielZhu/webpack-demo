@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,">
+  <title>Title</title>
+</head>
+<body>
+<h3>webpack是什么</h3>
+<p>webpack是一个模块化打包工具，使用loader、plugin将文件转化为浏览器可执行的程序，输出由多个模块组合成的文件，</p>
+<h3>有什么优点</h3>
+<p>专注于模块化打包</p>
+<p>通过plugin增加webpack打包功能</p>
+<p>通过loader转化，所有类型的文件都可被解析打包</p>
+<p>活跃的社区</p>
+<h3>构建的流程</h3>
+<p>
+  1.串行
+  2.用上一步得到的参数初始化compiler对象，加载所有配置插件开始编译
+  3.根据配置中的entry找出所有的入口文件
+  4.进行模块编译：入口->调用所有的loader，对模块进行翻译，再找出模块之间的依赖关系，递归重复该步骤，得出最终内容和依赖关系
+  5.输出资源：根据依赖关系，组成一个个包含个个模块的chunk,把每个chunk转化为单独的文件加入到输出列表
+  6.打包完成，打包完成，确认输出内容，根据配置正确输出路径、文件，把内容写入磁盘
+</p>
+<h3>webpack会在特定时间广播事件，</h3>
+<script src="./dist/dist.js"></script>
+</body>
+</html>
